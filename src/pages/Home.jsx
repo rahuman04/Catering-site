@@ -316,7 +316,7 @@ export default function HomeHeader() {
             id="dishesContainer"
             className="flex space-x-6 overflow-x-auto no-scrollbar px-4 scroll-smooth"
           >
-            {[1, 2, 3, 4, 5].map((n) => (
+            {[1, 2, 3, 4].map((n) => (
               <div
                 key={n}
                 className="min-w-[250px] rounded-xl overflow-hidden shadow-md bg-white border border-[#E6D8C4]"

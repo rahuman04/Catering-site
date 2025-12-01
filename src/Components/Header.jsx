@@ -30,12 +30,12 @@ export default function Header() {
       ],
      },
     {
-      name: "Menu",
-      dropdown: [
-        { name: "Wedding Menu" },
-        { name: "Corporate Catering" },
-        { name: "Birthday Packages" },
-      ],
+      name: "Menu",link: "/menu"
+      // dropdown: [
+      //   { name: "Wedding Menu" },
+      //   { name: "Corporate Catering" },
+      //   { name: "Birthday Packages" },
+      // ],
     },
     {
       name: "Services",link: "/services",
