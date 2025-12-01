@@ -22,22 +22,23 @@ export default function Header() {
   }, [dark]);
 
   const menuItems = [
-    { name: "Home", link: "/" },
+    { name: "Home", link: "/" 
+ },
     {
-      name: "Menu",
-      dropdown: [
-        { name: "Wedding Menu" },
-        { name: "Corporate Catering" },
-        { name: "Birthday Packages" },
-      ],
+      name: "Menu",link: "/menu"
+      // dropdown: [
+      //   { name: "Wedding Menu" },
+      //   { name: "Corporate Catering" },
+      //   { name: "Birthday Packages" },
+      // ],
     },
     {
       name: "Services",
-      dropdown: [
-        { name: "Buffet Service" },
-        { name: "Live Counters" },
-        { name: "Event Planning" },
-      ],
+      // dropdown: [
+      //   { name: "Buffet Service" },
+      //   { name: "Live Counters" },
+      //   { name: "Event Planning" },
+      // ],
     },
     { name: "About", link: "/about" },
     { name: "Contact", link: "/contact" },

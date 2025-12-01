@@ -227,7 +227,7 @@ export default function HomeHeader() {
         </div>
       </section>
 
-      {/* POPULAR PACKAGES */}
+      {/* POPULAR PACKAGES
       <section className="py-20 px-6 bg-[#FAF5EE]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4A2E21]">
           Popular Packages
@@ -252,7 +252,7 @@ export default function HomeHeader() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* CHEF TEAM */}
       <section className="py-20 px-6 bg-[#FDF9F3]">
@@ -316,7 +316,7 @@ export default function HomeHeader() {
             id="dishesContainer"
             className="flex space-x-6 overflow-x-auto no-scrollbar px-4 scroll-smooth"
           >
-            {[1, 2, 3, 4, 5].map((n) => (
+            {[1, 2, 3, 4].map((n) => (
               <div
                 key={n}
                 className="min-w-[250px] rounded-xl overflow-hidden shadow-md bg-white border border-[#E6D8C4]"
