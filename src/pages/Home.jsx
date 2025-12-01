@@ -228,7 +228,7 @@ export default function HomeHeader() {
       </section>
 
       {/* POPULAR PACKAGES */}
-      <section className="py-20 px-6 bg-[#FAF5EE]">
+      {/* <section className="py-20 px-6 bg-[#FAF5EE]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4A2E21]">
           Popular Packages
         </h2>
@@ -252,7 +252,7 @@ export default function HomeHeader() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* CHEF TEAM */}
       <section className="py-20 px-6 bg-[#FDF9F3]">

@@ -24,9 +24,9 @@ export default function About() {
   ];
 
   const services = [
-    { id: 1, title: 'Silver Package', price: '₹12,000', img: './src/images/silver.png', summary: 'Great for intimate gatherings (50-100 guests). Simple, delicious and budget-friendly.', items: ['3-course buffet', 'Vegetarian options', 'Standard cutlery & staff'] },
-    { id: 2, title: 'Gold Package', price: '₹25,000', img: './src/images/golden.png', summary: 'Perfect for weddings and corporate dinners. Includes live counters and decor basics.', items: ['4-course plated menu', 'Live counters', 'Decor basics', 'Experienced serving staff'] },
-    { id: 3, title: 'Platinum Package', price: '₹45,000', img: './src/images/premium.png', summary: 'Full-service premium offering with on-site chef, premium table settings and coordination.', items: ['Custom gourmet menu', 'Premium table settings', 'On-site chef & manager', 'Full event coordination'] },
+    // { id: 1, title: 'Silver Package', price: '₹12,000', img: './src/images/silver.png', summary: 'Great for intimate gatherings (50-100 guests). Simple, delicious and budget-friendly.', items: ['3-course buffet', 'Vegetarian options', 'Standard cutlery & staff',] },
+    // { id: 2, title: 'Gold Package', price: '₹25,000', img: './src/images/golden.png', summary: 'Perfect for weddings and corporate dinners. Includes live counters and decor basics.', items: ['4-course plated menu', 'Live counters', 'Decor basics', 'Experienced serving staff'] },
+    // { id: 3, title: 'Platinum Package', price: '₹45,000', img: './src/images/premium.png', summary: 'Full-service premium offering with on-site chef, premium table settings and coordination.', items: ['Custom gourmet menu', 'Premium table settings', 'On-site chef & manager', 'Full event coordination'] },
   ];
 
   const team = [
@@ -79,7 +79,7 @@ export default function About() {
             </a>
 
             <a href={member.socials.phone} className="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 text-sm hover:bg-[var(--accent)] hover:text-white transition" aria-label={`Call ${member.name}`}>
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h2l2 7-2 7h2l1-3h6l1 3h2l-2-7 2-7H3z" /></svg>
+              {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5h2l2 7-2 7h2l1-3h6l1 3h2l-2-7 2-7H3z" /></svg> */}
               <span className="text-xs">Call</span>
             </a>
 
@@ -283,11 +283,11 @@ export default function About() {
         </motion.div>
       </motion.div>
 
-      <div className="mt-16"><h2 className="text-3xl font-bold text-[var(--brown)] mb-6 text-center">Our Packages</h2>
+      {/* <div className="mt-16"><h2 className="text-3xl font-bold text-[var(--brown)] mb-6 text-center">Our Packages</h2>
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} className="grid md:grid-cols-3 gap-6">
           {services.map(s => (<FeatureCard key={s.id} service={s} />))}
         </motion.div>
-      </div>
+      </div> */}
 
       <div className="mt-16"><Testimonials /></div>
 

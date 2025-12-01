@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { link } from "framer-motion/client";
 
 export default function Header() {
   const [openMobile, setOpenMobile] = useState(false);
@@ -22,7 +23,12 @@ export default function Header() {
   }, [dark]);
 
   const menuItems = [
-    { name: "Home", link: "/" },
+    { name: "Home", link: "/",
+       dropdown: [
+        { name: "Home2",link: "/home2" },
+        
+      ],
+     },
     {
       name: "Menu",
       dropdown: [
@@ -32,12 +38,12 @@ export default function Header() {
       ],
     },
     {
-      name: "Services",
-      dropdown: [
-        { name: "Buffet Service" },
-        { name: "Live Counters" },
-        { name: "Event Planning" },
-      ],
+      name: "Services",link: "/services",
+      // dropdown: [
+      //   { name: "Buffet Service" },
+      //   { name: "Live Counters" },
+      //   { name: "Event Planning" },
+      // ],
     },
     { name: "About", link: "/about" },
     { name: "Contact", link: "/contact" },
