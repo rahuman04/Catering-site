@@ -12,15 +12,15 @@ export default function About() {
   };
 
   const galleryImages = [
-    { src: './src/images/biriyani.jpg', alt: 'Mutton Biriyani' },
-    { src: './src/images/elegant.jpg', alt: 'Chicken biriyani' },
-    { src: './src/images/dessert.jpg', alt: 'Fried Chicken' },
-    { src: './src/images/buffet table.jpg', alt: 'Dosa' },
-    { src: './src/images/garnishing.png', alt: 'Idiyappam' },    
-    { src: './src/images/mutton.jpg', alt: 'Parotta' },
-    { src: './src/images/salad.jpg', alt: 'Bread Halwa' },
-    { src: './src/images/jamun.jpg', alt: 'Ice Cream' },
-    { src: './src/images/wedding.jpg', alt: 'Gulab Jamun' },
+    { src: 'https://i.pinimg.com/736x/12/1b/9f/121b9f4d28e4cfb2d6268b6f77aafa5e.jpg', alt: 'Mutton Biriyani' },
+    { src: 'https://i.pinimg.com/736x/5c/a0/3a/5ca03a1d98fc96cab4be558904bc8357.jpg', alt: 'Chicken biriyani' },
+    { src: 'https://i.pinimg.com/736x/a0/92/4d/a0924da750c9ef458be70bfaec61fa11.jpg', alt: 'Fried Chicken' },
+    { src: 'https://i.pinimg.com/736x/c7/1e/ea/c71eea435b61a0362d6fde7e8df975a9.jpg', alt: 'Dosa' },
+    { src: 'https://i.pinimg.com/736x/f2/e3/90/f2e3900d2893ff27d4b989b5271dd50e.jpg', alt: 'Idiyappam' },    
+    { src: 'https://i.pinimg.com/736x/da/8f/69/da8f6942f6b71723a28ae58360941d6d.jpg', alt: 'Parotta' },
+    { src: 'https://i.pinimg.com/736x/3a/81/b4/3a81b47416114c3ea3ef93d08ed4f584.jpg', alt: 'Bread Halwa' },
+    { src: 'https://i.pinimg.com/1200x/fe/09/7c/fe097cd2d78a724220a0694d6c5bb73e.jpg', alt: 'Ice Cream' },
+    { src: 'https://i.pinimg.com/736x/f6/80/74/f680742280fe42b290b0a5ce2798621c.jpg', alt: 'Gulab Jamun' },
   ];
 
   const services = [
@@ -146,7 +146,7 @@ export default function About() {
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {galleryImages.map((img, i) => (
             <motion.button key={img.src} onClick={() => openAt(i)} variants={card} className="w-full block rounded-lg overflow-hidden shadow hover:shadow-lg transform hover:-translate-y-1 transition focus:outline-none focus:ring-2 focus:ring-[var(--accent)]" aria-label={`Open image ${i + 1}: ${img.alt}`}>
-              <img src={img.src} alt={img.alt} className="w-full h-48 object-cover" loading="lazy" />
+              <img src={img.src} alt={img.alt} className="w-full h-80 object-cover" loading="lazy" />
             </motion.button>
           ))}
         </motion.div>

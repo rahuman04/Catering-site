@@ -25,19 +25,19 @@ const CARDS = [
     id: 4,
     title: "Live Counters",
     desc: "Dosa, chaat, pasta, BBQ & many more live food stations.",
-    img: "https://in.pinterest.com/pin/173318285656782814/",
+    img: "https://i.pinimg.com/736x/f3/7b/75/f37b7570ab6da074791f289dd5a0221c.jpg",
   },
   {
     id: 5,
     title: "Dessert Stations",
     desc: "Cakes, pastries, sweets & live dessert counters.",
-    img: "/gallery2.jpg",
+    img: "https://i.pinimg.com/1200x/fe/09/7c/fe097cd2d78a724220a0694d6c5bb73e.jpg",
   },
   {
     id: 6,
     title: "Custom Menus",
     desc: "Special menus for diet needs, regional cuisines & themes.",
-    img: "/gallery3.jpg",
+    img: "https://i.pinimg.com/1200x/17/d2/f5/17d2f5900c46f8b3c1a4f564b0f0077a.jpg",
   },
 ];
 
