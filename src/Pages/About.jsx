@@ -12,15 +12,15 @@ export default function About() {
   };
 
   const galleryImages = [
-    { src: './src/images/biriyani.jpg', alt: 'Signature biryani with herbs' },
-    { src: './src/images/elegant.jpg', alt: 'Elegant plated starter' },
-    { src: './src/images/dessert.jpg', alt: 'Dessert table with pastries' },
-    { src: './src/images/buffet table.jpg', alt: 'Buffet spread at an event' },
-    { src: './src/images/garnishing.png', alt: 'Close-up of garnishing' },    
-    { src: './src/images/mutton.jpg', alt: 'Chef preparing a dish' },
-    { src: './src/images/salad.jpg', alt: 'Colorful salad display' },
-    { src: './src/images/jamun.jpg', alt: 'gulab jamun' },
-    { src: './src/images/wedding.jpg', alt: 'Outdoor wedding setup' },
+    { src: './src/images/biriyani.jpg', alt: 'Mutton Biriyani' },
+    { src: './src/images/elegant.jpg', alt: 'Chicken biriyani' },
+    { src: './src/images/dessert.jpg', alt: 'Fried Chicken' },
+    { src: './src/images/buffet table.jpg', alt: 'Dosa' },
+    { src: './src/images/garnishing.png', alt: 'Idiyappam' },    
+    { src: './src/images/mutton.jpg', alt: 'Parotta' },
+    { src: './src/images/salad.jpg', alt: 'Bread Halwa' },
+    { src: './src/images/jamun.jpg', alt: 'Ice Cream' },
+    { src: './src/images/wedding.jpg', alt: 'Gulab Jamun' },
   ];
 
   const services = [
@@ -273,7 +273,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        <motion.div variants={fadeInUp} className="relative"><div className="rounded-2xl shadow-xl overflow-hidden ring-1 ring-[var(--brown)]"><img src="./src/images/buffet1.jpg" alt="Buffet and plated dishes from our catering" className="w-full h-96 object-cover" loading="lazy" /></div>
+        <motion.div variants={fadeInUp} className="relative"><div className="rounded-2xl shadow-xl overflow-hidden ring-1 ring-[var(--brown)]"><img src="https://i.pinimg.com/1200x/73/f8/a9/73f8a962194665f8ff4a72d0267f0fff.jpg" alt="Buffet and plated dishes from our catering" className="w-full h-96 object-cover" loading="lazy" /></div>
           <div className="absolute -bottom-6 left-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4 ring-1" style={{ borderColor: 'rgba(106,64,42,0.06)' }}>
             <div><div className="text-sm text-gray-500">Since</div><div className="text-lg font-semibold text-[var(--brown)]">2014</div></div>
             <div className="border-l h-8" />
