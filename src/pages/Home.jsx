@@ -15,7 +15,7 @@ export default function HomeHeader() {
         className="relative h-[90vh] bg-cover bg-center flex items-center justify-center text-center px-6"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=1600&q=90')",
+            "url('https://i.pinimg.com/1200x/0b/bb/e8/0bbbe8435a1373f6564377a6059cb710.jpg",
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -190,7 +190,7 @@ export default function HomeHeader() {
 
       {/* NEW SECTION — Brown/Cream THEMED IMPROVED */}
       {/* WHY CHOOSE US */}
-      <section className="py-20 px-6 bg-[#FDF9F3]">
+      {/* <section className="py-20 px-6 bg-[#FDF9F3]">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#4A2E21]">
           Why Choose Us?
         </h2>
@@ -222,33 +222,6 @@ export default function HomeHeader() {
                 {item.title}
               </h3>
               <p className="text-gray-600">{item.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* POPULAR PACKAGES */}
-      {/* <section className="py-20 px-6 bg-[#FAF5EE]">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#4A2E21]">
-          Popular Packages
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {[
-            { price: "₹499 / Plate", items: "Veg Menu – 12 Items" },
-            { price: "₹699 / Plate", items: "Deluxe Veg / Non-Veg – 16 Items" },
-            { price: "₹999 / Plate", items: "Premium Grand Menu – 20+ Items" },
-          ].map((p, i) => (
-            <div
-              key={i}
-              className="p-8 bg-white shadow-md rounded-2xl border border-[#E6D8C4] hover:shadow-xl transition"
-            >
-              <h3 className="text-2xl font-bold mb-4 text-[#B77E47]">{p.price}</h3>
-              <p className="text-gray-700 mb-4">{p.items}</p>
-
-              <button className="bg-[#B77E47] w-full py-3 rounded-xl text-white font-bold hover:bg-[#A36D39] transition">
-                View Details
-              </button>
             </div>
           ))}
         </div>
@@ -390,6 +363,7 @@ export default function HomeHeader() {
           Get a Quote
         </Link>
       </section>
+      
 
       {/* FOOTER */}
 <footer className="bg-[#F6F1E9] text-[#4A3F35] py-12 px-6 shadow-inner">

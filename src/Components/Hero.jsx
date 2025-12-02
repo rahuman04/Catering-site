@@ -37,7 +37,7 @@ export default function HeroSection() {
         {/* Right Image */}
         <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
           <img
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+            src="https://i.pinimg.com/1200x/af/2a/a2/af2aa2c7f252116a190943470e30b395.jpg"
             alt="Catering Food"
             className="rounded-3xl shadow-xl w-11/12 md:w-full object-cover"
           />
