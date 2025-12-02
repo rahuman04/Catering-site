@@ -31,9 +31,9 @@ export default function Header() {
 
     { name: "Services", 
       dropdown: [
-         {name: "Services", link: "/services2" },
-         {name: "Services2", link: "/services2" },
-         {name: "Services3", link: "/services2"}
+         {name: "Services", link: "/services" },
+         {name: "Services 2", link: "/services2" },
+         {name: "Services 3", link: "/services3"}
       ]
     },
 

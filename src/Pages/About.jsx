@@ -12,15 +12,15 @@ export default function About() {
   };
 
   const galleryImages = [
-    { src: 'https://i.pinimg.com/736x/12/1b/9f/121b9f4d28e4cfb2d6268b6f77aafa5e.jpg', alt: 'Signature biryani with herbs' },
-    { src: 'https://i.pinimg.com/736x/5c/a0/3a/5ca03a1d98fc96cab4be558904bc8357.jpg', alt: 'Elegant plated starter' },
-    { src: 'https://i.pinimg.com/736x/a0/92/4d/a0924da750c9ef458be70bfaec61fa11.jpg', alt: 'Dessert table with pastries' },
-    { src: 'https://i.pinimg.com/736x/c7/1e/ea/c71eea435b61a0362d6fde7e8df975a9.jpg', alt: 'Buffet spread at an event' },
-    { src: 'https://i.pinimg.com/736x/f2/e3/90/f2e3900d2893ff27d4b989b5271dd50e.jpg', alt: 'Close-up of garnishing' },    
-    { src: 'https://i.pinimg.com/736x/da/8f/69/da8f6942f6b71723a28ae58360941d6d.jpg', alt: 'Chef preparing a dish' },
-    { src: 'https://i.pinimg.com/736x/3a/81/b4/3a81b47416114c3ea3ef93d08ed4f584.jpg', alt: 'Colorful salad display' },
-    { src: 'https://i.pinimg.com/1200x/fe/09/7c/fe097cd2d78a724220a0694d6c5bb73e.jpg', alt: 'gulab jamun' },
-    { src: 'https://i.pinimg.com/736x/f6/80/74/f680742280fe42b290b0a5ce2798621c.jpg', alt: 'Outdoor wedding setup' },
+    { src: 'https://i.pinimg.com/736x/12/1b/9f/121b9f4d28e4cfb2d6268b6f77aafa5e.jpg', alt: 'Mutton Biriyani' },
+    { src: 'https://i.pinimg.com/736x/5c/a0/3a/5ca03a1d98fc96cab4be558904bc8357.jpg', alt: 'Chicken biriyani' },
+    { src: 'https://i.pinimg.com/736x/a0/92/4d/a0924da750c9ef458be70bfaec61fa11.jpg', alt: 'Fried Chicken' },
+    { src: 'https://i.pinimg.com/736x/c7/1e/ea/c71eea435b61a0362d6fde7e8df975a9.jpg', alt: 'Dosa' },
+    { src: 'https://i.pinimg.com/736x/f2/e3/90/f2e3900d2893ff27d4b989b5271dd50e.jpg', alt: 'Idiyappam' },    
+    { src: 'https://i.pinimg.com/736x/da/8f/69/da8f6942f6b71723a28ae58360941d6d.jpg', alt: 'Parotta' },
+    { src: 'https://i.pinimg.com/736x/3a/81/b4/3a81b47416114c3ea3ef93d08ed4f584.jpg', alt: 'Bread Halwa' },
+    { src: 'https://i.pinimg.com/1200x/fe/09/7c/fe097cd2d78a724220a0694d6c5bb73e.jpg', alt: 'Ice Cream' },
+    { src: 'https://i.pinimg.com/736x/f6/80/74/f680742280fe42b290b0a5ce2798621c.jpg', alt: 'Gulab Jamun' },
   ];
 
   const services = [
@@ -273,7 +273,7 @@ export default function About() {
           </motion.div>
         </div>
 
-        <motion.div variants={fadeInUp} className="relative"><div className="rounded-2xl shadow-xl overflow-hidden ring-1 ring-[var(--brown)]"><img src="./src/images/buffet1.jpg" alt="Buffet and plated dishes from our catering" className="w-full h-96 object-cover" loading="lazy" /></div>
+        <motion.div variants={fadeInUp} className="relative"><div className="rounded-2xl shadow-xl overflow-hidden ring-1 ring-[var(--brown)]"><img src="https://i.pinimg.com/1200x/73/f8/a9/73f8a962194665f8ff4a72d0267f0fff.jpg" alt="Buffet and plated dishes from our catering" className="w-full h-96 object-cover" loading="lazy" /></div>
           <div className="absolute -bottom-6 left-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4 ring-1" style={{ borderColor: 'rgba(106,64,42,0.06)' }}>
             <div><div className="text-sm text-gray-500">Since</div><div className="text-lg font-semibold text-[var(--brown)]">2014</div></div>
             <div className="border-l h-8" />
