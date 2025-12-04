@@ -58,8 +58,8 @@ export default function About() {
   const team = [
     {
       id: 1,
-      img: "./src/images/chef2.jpg",
-      name: "Chef Jessie",
+      img: "https://i.pinimg.com/736x/75/ce/3f/75ce3f1d2a485b394bdfe6b0aa148214.jpg",
+      name: "Chef Tonglin",
       role: "Head Chef",
       bio: "15 years crafting authentic flavours & modern plating. Head of menu development and quality control.",
       socials: {
@@ -70,8 +70,8 @@ export default function About() {
     },
     {
       id: 2,
-      img: "./src/images/chef1.jpg",
-      name: "Chef Rahul",
+      img: "https://i.pinimg.com/1200x/8f/ec/b6/8fecb6005da0fbad50b4a59d0a211188.jpg",
+      name: "Chef Jungkook",
       role: "Pastry Specialist",
       bio: "Pastry chef with a flair for seasonal desserts and bespoke wedding cakes.",
       socials: {
@@ -82,8 +82,8 @@ export default function About() {
     },
     {
       id: 3,
-      img: "./src/images/chef3.jpg",
-      name: "Chef Mary",
+      img: "https://i.pinimg.com/1200x/90/fc/ce/90fccecc2c82fc0f60185e18abe9a4a7.jpg",
+      name: "Chef Jimin",
       role: "Event Coordinator",
       bio: "Coordinates front-of-house, logistics and ensures flawless service on event day.",
       socials: { mail: "mailto:arjun@example.com", phone: "tel:+919112223334" },
@@ -150,7 +150,7 @@ export default function About() {
           <img
             src={member.img}
             alt={member.name}
-            className="w-full h-64 object-cover"
+            className="w-full h-50 object-cover "
             loading="lazy"
           />
           <div className="absolute top-4 right-4 bg-white/90 rounded-full px-3 py-1 text-sm font-semibold text-[var(--brown)] shadow">
@@ -159,11 +159,11 @@ export default function About() {
         </div>
 
         <div className="p-6">
-          <h3 className="text-lg font-semibold text-[var(--brown)]">
+          <h3 className="text-lg font-semibold text-[var(--brown)] text-center mb-3">
             {member.name}
           </h3>
-          <p className="text-sm text-gray-500 mb-3">{member.role}</p>
-          <p className="text-sm text-gray-700 mb-4">{member.bio}</p>
+
+
 
           <div className="flex items-center gap-3">
             <a
@@ -479,9 +479,8 @@ export default function About() {
               <button
                 key={idx}
                 onClick={() => setI(idx)}
-                className={`w-2 h-2 rounded-full ${
-                  i === idx ? "bg-[var(--brown)]" : "bg-gray-300"
-                } focus:outline-none focus:ring-2 focus:ring-[var(--accent)]`}
+                className={`w-2 h-2 rounded-full ${i === idx ? "bg-[var(--brown)]" : "bg-gray-300"
+                  } focus:outline-none focus:ring-2 focus:ring-[var(--accent)]`}
                 aria-label={`Show testimonial ${idx + 1}`}
               />
             ))}
@@ -502,7 +501,7 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="text-2xl font-semibold text-[var(--brown)] mb-4"
+          className="text-2xl font-semibold text-[var(--brown)] mb-4 text-center pb-4"
         >
           Frequently asked questions
         </motion.h3>
@@ -511,28 +510,55 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.12 }}
-          className="space-y-3"
+          className="space-y-3 max-w-3xl mx-auto"
         >
-          {faqs.map((f, idx) => (
-            <motion.div
-              key={idx}
-              variants={fadeInUp}
-              className="bg-white rounded-lg shadow p-4"
-            >
-              <button
-                className="w-full text-left flex justify-between items-center focus:outline-none"
-                onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-              >
-                <span className="font-medium text-[var(--brown)]">{f.q}</span>
-                <span className="text-gray-400">
-                  {openIdx === idx ? "−" : "+"}
-                </span>
-              </button>
-              {openIdx === idx && (
-                <div className="mt-3 text-gray-600">{f.a}</div>
-              )}
-            </motion.div>
-          ))}
+          {faqs.map((f, idx) => {
+  const isOpen = openIdx === idx;
+
+  return (
+    <motion.div
+      key={idx}
+      variants={fadeInUp}
+      className="bg-white rounded-lg shadow p-4"
+    >
+      <button
+        className="w-full text-left flex justify-between items-center focus:outline-none"
+        onClick={() => setOpenIdx(isOpen ? null : idx)}
+        aria-expanded={isOpen}
+      >
+        <span className="font-medium text-[var(--brown)]">{f.q}</span>
+
+        {/* animated arrow */}
+        <motion.span
+          className="text-gray-400"
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.25 }}
+          style={{ display: "inline-block" }} // needed so rotate works reliably
+        >
+          ▼
+        </motion.span>
+      </button>
+
+      {/* animated answer panel */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.32, ease: "easeInOut" }}
+            style={{ overflow: "hidden" }}
+            className="mt-3 text-gray-600"
+          >
+            <div className="py-2">{f.a}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+})}
+
         </motion.div>
       </div>
     );
@@ -765,7 +791,7 @@ export default function About() {
             <div>
               <div className="text-sm text-gray-500">Since</div>
               <div className="text-lg font-semibold text-[var(--brown)]">
-                2014
+                2020
               </div>
             </div>
             <div className="border-l h-8" />
@@ -787,16 +813,16 @@ export default function About() {
 
       <div className="mt-12">
         <ImageGallery />
-        <p className="text-sm text-gray-600 mt-4">
+        {/* <p className="text-sm text-gray-600 mt-4">
           Tip: Click any image to view larger and navigate the gallery.
-        </p>
+        </p> */}
       </div>
 
       <div className="mt-12">
         <FAQ />
       </div>
 
-      <div className="mt-20">
+      <div className="mt-20 w-[80%] mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8 text-[var(--brown)]">
           Meet Our Team
         </h2>

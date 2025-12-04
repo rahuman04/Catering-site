@@ -134,7 +134,7 @@ export default function Home2() {
               },
               {
                 title: "Corporate Events",
-                img: "https://i.pinimg.com/736x/c9/d2/57/c9d257d0191ae9443a20fb228125f3bb.jpg",
+                img: "https://i.pinimg.com/1200x/00/79/00/0079002d1addab268de713d3faab68e9.jpg",
               },
               {
                 title: "Live Counters",

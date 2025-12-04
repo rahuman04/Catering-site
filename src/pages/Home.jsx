@@ -237,18 +237,18 @@ export default function HomeHeader() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[
             {
-              img: "../images/chefkhan.png",
-              name: "Chef Khan",
+              img: "https://i.pinimg.com/1200x/8f/ec/b6/8fecb6005da0fbad50b4a59d0a211188.jpg",
+              name: "Chef Jungkook",
               role: "Head Chef",
             },
             {
-              img: "../images/chefrose.png",
-              name: "Chef Rose",
+              img: "https://i.pinimg.com/736x/75/ce/3f/75ce3f1d2a485b394bdfe6b0aa148214.jpg",
+              name: "Chef Tonglin",
               role: "Pastry Specialist",
             },
             {
-              img: "../images/chefishaan.png",
-              name: "Chef Ishaan",
+              img: "https://i.pinimg.com/1200x/90/fc/ce/90fccecc2c82fc0f60185e18abe9a4a7.jpg",
+              name: "Chef Jimin",
               role: "Live Counter Expert",
             },
           ].map((c, i) => (
