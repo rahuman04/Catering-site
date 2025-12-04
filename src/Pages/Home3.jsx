@@ -49,7 +49,7 @@ export default function Home() {
   };
 
   return (
-    <main className="bg-[#fdfcfb] text-gray-800 leading-relaxed mt-20">
+    <main className="bg-[#fdfcfb] text-gray-800 leading-relaxed">
 
       {/* HERO */}
       <section className="relative h-screen min-h-[720px] flex items-center shadow-xl">
@@ -87,10 +87,10 @@ export default function Home() {
                 to="/contact"
                 className="px-6 py-3 rounded-lg border border-gray-300 text-gray-800 hover:bg-gray-100 transition"
               >
-                Plan Your Event
+                Book Now
               </Link>
             </div>
-
+{/* 
             <div className="mt-8 flex flex-wrap gap-4">
               {[
                 { label: "10+ Years", sub: "Excellence" },
@@ -105,15 +105,15 @@ export default function Home() {
                   <p className="text-sm text-gray-500">{s.sub}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           <div className="hidden lg:block">
             <div className="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
               <img
-                src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src="https://i.pinimg.com/1200x/76/a4/1b/76a41be6b666cda5581b174744a98a4b.jpg"
                 alt="Event setup"
-                className="w-full h-[520px] object-cover"
+                className="w-full h-[350px] object-cover"
               />
             </div>
           </div>
@@ -201,10 +201,10 @@ export default function Home() {
         </div>
 
         <div ref={menuRef} className="flex gap-6 overflow-x-auto no-scrollbar py-2">
-          {[{ name: "South Indian Celebration", img: "https://images.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg?auto=compress&cs=tinysrgb&w=900" },
-            { name: "Mughlai Royal", img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=900" },
-            { name: "Continental Elegance", img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&cs=tinysrgb&w=900" },
-            { name: "Pan-Asian Live", img: "https://images.pexels.com/photos/357743/pexels-photo-357743.jpeg?auto=compress&cs=tinysrgb&w=900" },
+          {[{ name: "Briyani", img: "https://i.pinimg.com/1200x/7e/64/20/7e64207ed671b182baed3bd853b4a150.jpg " },
+            { name: "Fried Chicken", img: "https://i.pinimg.com/736x/6d/91/11/6d91117fef2f5891c399f841ba518371.jpg " },
+            { name: "Mutton Sukka", img: "https://i.pinimg.com/736x/d2/1c/a9/d21ca9eb53f1140d699de212e33fdb7a.jpg " },
+            { name: "Bread Halwa", img: " https://i.pinimg.com/736x/c3/86/f0/c386f0e6eb2e598deefdf4193fc4f485.jpg" },
           ].map((m, i) => (
             <div key={i} className="min-w-[320px] rounded-xl overflow-hidden shadow-md border border-gray-200 group relative">
               <img src={m.img} alt={m.name} className="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
@@ -246,7 +246,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-10">
           {[
             { title: "Live BBQ Counters", img: "https://i.pinimg.com/736x/65/98/10/659810f2b9e8de538e5a654c7160ec83.jpg", icon: <Flame /> },
-            { title: "Royal Buffet Setup", img: "https://images.pexels.com/photos/262918/pexels-photo-262918.jpeg?auto=compress&cs=tinysrgb&w=1200", icon: <Gift /> },
+            { title: "Royal Buffet Setup", img: "https://i.pinimg.com/736x/99/91/c2/9991c20d1b47768922bcf8bd0e3c3acf.jpg", icon: <Gift /> },
             { title: "Dessert Paradise", img: "https://i.pinimg.com/1200x/9b/c7/fc/9bc7fc0e6f4b529ce7475f92831b6491.jpg", icon: <Coffee /> },
           ].map((h, i) => (
             <div key={i} className="relative rounded-2xl overflow-hidden shadow-md border border-gray-200 group">
@@ -302,10 +302,12 @@ export default function Home() {
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            "https://i.pinimg.com/1200x/b4/a6/8f/b4a68f32abef908087617565ce984204.jpg",
-            "https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&w=1200",
-            "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200",
-            // "https://images.pexels.com/photos/628776/pexels-photo-628776.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "https://i.pinimg.com/1200x/c2/e0/a0/c2e0a0038c541165e3dc2ca2b15c5db9.jpg",
+            "https://i.pinimg.com/736x/89/31/42/89314223a9db3612e392660171c2316d.jpg",
+            "https://i.pinimg.com/1200x/99/ed/6a/99ed6a2254ea8521279242762b392b24.jpg",
+            "https://i.pinimg.com/1200x/0f/18/c4/0f18c4d5c257ac87780552f3bcf21a41.jpg",
+            "https://i.pinimg.com/736x/99/91/c2/9991c20d1b47768922bcf8bd0e3c3acf.jpg",
+            "https://i.pinimg.com/736x/3b/c7/e5/3bc7e554810eeb021b4dce2c3854a287.jpg"
           ].map((src, i) => (
             <div key={i} className="rounded-xl overflow-hidden shadow-md border border-gray-200 group">
               <img
