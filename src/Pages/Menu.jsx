@@ -180,7 +180,7 @@ export default function Menu() {
           name: " Fish fry ",
           img: " https://i.pinimg.com/736x/50/7a/27/507a27c36c725030bb80fbc909a6b12a.jpg ",
         },
-         {
+        {
           name: " Gravy ",
           img: "https://i.pinimg.com/1200x/01/fa/b6/01fab647f1b4b76d9b03b8bc466db4fc.jpg",
         },
@@ -259,7 +259,7 @@ export default function Menu() {
           name: "Falooda",
           img: "https://i.pinimg.com/736x/70/b4/f6/70b4f68a454ab475953faf3c4d1a9a09.jpg",
         },
-         {
+        {
           name: "Jigarthanda",
           img: "https://i.pinimg.com/736x/db/5a/05/db5a05602f209de39dba2b5864718bfc.jpg",
         },
@@ -326,10 +326,9 @@ export default function Menu() {
               onClick={() => setActiveCategory(cat)}
               className={`
                 px-5 py-2 rounded-full text-sm font-medium transition shadow 
-                ${
-                  activeCategory === cat
-                    ? "bg-[#A67F5B] text-white shadow-lg scale-105"
-                    : "bg-white text-[#4A3F35] border border-[#D6C4B4] hover:bg-[#E8DBCC]"
+                ${activeCategory === cat
+                  ? "bg-[#A67F5B] text-white shadow-lg scale-105"
+                  : "bg-white text-[#4A3F35] border border-[#D6C4B4] hover:bg-[#E8DBCC]"
                 }
               `}
             >
@@ -504,15 +503,14 @@ export default function Menu() {
         <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand Section */}
           <div>
-            <img
-              src="https://i.pinimg.com/736x/46/cc/86/46cc8668aac2f38c31cfb3501b02798a.jpg"
-              alt="Jack Cater Logo"
-              className="w-50 mb-6 drop-shadow-lg"
-            />
-            <p className="leading-relaxed text-gray-400 max-w-xs">
-              Let Jack Cater transform your special occasion into a masterpiece
-              with our professional touch.
-            </p>
+            <div className="flex flex-col items-center text-center">
+              <img src="./src/images/logo white.jpg" className="w-24 h-24 mb-4 rounded-full" />
+
+              <p className="text-slate-300 max-w-xs">
+                Let Jack Cater transform your special occasion into a masterpiece with our professional touch.
+              </p>
+            </div>
+
 
             {/* Social Icons */}
             <div className="flex gap-5 text-2xl mt-7 text-gray-400">

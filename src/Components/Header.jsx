@@ -56,6 +56,7 @@ export default function Header() {
             scrolled ? "text-orange-700 scale-95" : "text-orange-800"
           } dark:text-orange-400`}
         >
+          <img src="./src/images/logo white.jpg" alt="Jack cater" className="inline-block w-10 h-10 mr-2 rounded-full object-cover" />
           Jack<span className="text-gray-900 dark:text-gray-100"> Cater</span>
         </h1>
 

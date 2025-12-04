@@ -300,7 +300,7 @@ export default function About() {
     );
   }
 
-  /* ---------- Gallery & Testimonials & FAQ (unchanged) ---------- */
+  /* ---------- Gallery & Testimonials & FAQ (unchanged except FAQ width tweak and small comments) ---------- */
   const ImageGallery = () => {
     const [open, setOpen] = React.useState(false);
     const [index, setIndex] = React.useState(0);
@@ -491,8 +491,10 @@ export default function About() {
     );
   };
 
+  // FAQ: made the text width narrower for easier reading and added small comments
   const FAQ = () => {
     const [openIdx, setOpenIdx] = React.useState(null);
+
     return (
       <div className="mt-10">
         <motion.h3

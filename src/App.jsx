@@ -7,6 +7,7 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Services2 from "./Pages/Services2";
 import Home2 from "./Pages/Home2";
+import Contact from "./Pages/Contact";
 import Home3 from "./Pages/Home3";
 import Menu from "./Pages/Menu";
 import Services3 from "./Pages/Services3";
@@ -34,6 +35,7 @@ function App() {
           <Route path="/home3" element={<Home3 />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/Services3" element={<Services3 />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/contact2" element={<Contact2 />} />
         </Routes>
       </Router>
