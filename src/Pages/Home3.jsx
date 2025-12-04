@@ -68,7 +68,7 @@ export default function Home() {
             </p>
 
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
-              Crafting Unforgettable  
+              Crafting Unforgettable
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-400"> Culinary Experiences</span>
             </h1>
 
@@ -90,7 +90,7 @@ export default function Home() {
                 Book Now
               </Link>
             </div>
-{/* 
+            {/* 
             <div className="mt-8 flex flex-wrap gap-4">
               {[
                 { label: "10+ Years", sub: "Excellence" },
@@ -165,15 +165,15 @@ export default function Home() {
           <h3 className="text-amber-500 font-semibold">Event Experiences</h3>
           <h2 className="text-3xl font-bold text-gray-900 mt-2">We Cater to Every Luxurious Occasion</h2>
 
-          <div className="mt-10 grid md:grid-cols-3 gap-8">
+          <div className="mt-10 grid md:grid-cols-3 gap-8 text-center">
             {[
               { title: "Royal Weddings", img: "https://i.pinimg.com/1200x/b4/a6/8f/b4a68f32abef908087617565ce984204.jpg" },
-              { title: "Corporate Galas", img: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" },
+              { title: "Corporate Event", img: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" },
               { title: "Birthday Parties", img: "https://i.pinimg.com/1200x/7b/c7/dd/7bc7dd20a6178ca0d0583e2f7f9888b3.jpg" },
             ].map((e, i) => (
               <div key={i} className="group relative rounded-xl overflow-hidden shadow-md border border-gray-200">
                 <img src={e.img} alt={e.title} className="w-full h-56 object-cover group-hover:scale-105 transition duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent flex items-end p-4">
+                <div className="p-4">
                   <h4 className="text-lg font-semibold text-amber-500">{e.title}</h4>
                 </div>
               </div>
@@ -200,17 +200,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div ref={menuRef} className="flex gap-6 overflow-x-auto no-scrollbar py-2">
+        <div ref={menuRef} className="flex gap-6 overflow-x-auto no-scrollbar py-5 ">
           {[{ name: "Briyani", img: "https://i.pinimg.com/1200x/7e/64/20/7e64207ed671b182baed3bd853b4a150.jpg " },
-            { name: "Fried Chicken", img: "https://i.pinimg.com/736x/6d/91/11/6d91117fef2f5891c399f841ba518371.jpg " },
-            { name: "Mutton Sukka", img: "https://i.pinimg.com/736x/d2/1c/a9/d21ca9eb53f1140d699de212e33fdb7a.jpg " },
-            { name: "Bread Halwa", img: " https://i.pinimg.com/736x/c3/86/f0/c386f0e6eb2e598deefdf4193fc4f485.jpg" },
+          { name: "Fried Chicken", img: "https://i.pinimg.com/736x/6d/91/11/6d91117fef2f5891c399f841ba518371.jpg " },
+          { name: "Mutton Sukka", img: "https://i.pinimg.com/736x/d2/1c/a9/d21ca9eb53f1140d699de212e33fdb7a.jpg " },
+          { name: "Bread Halwa", img: " https://i.pinimg.com/736x/c3/86/f0/c386f0e6eb2e598deefdf4193fc4f485.jpg" },
           ].map((m, i) => (
-            <div key={i} className="min-w-[320px] rounded-xl overflow-hidden shadow-md border border-gray-200 group relative">
+            <div key={i} className="min-w-[320px] rounded-xl overflow-hidden shadow-md border border-gray-200 group relative text-center h-55 ">
               <img src={m.img} alt={m.name} className="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
-              <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-white/80 to-transparent">
+              <div className="p-4">
                 <p className="text-amber-500 font-semibold">{m.name}</p>
-                <p className="text-xs text-gray-500 mt-1">Custom tasting • Seasonal menus</p>
+
               </div>
             </div>
           ))}
@@ -243,23 +243,23 @@ export default function Home() {
 
       {/* SPECIAL HIGHLIGHTS */}
       <section className="py-20 container mx-auto px-6 lg:px-20">
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-3 gap-10 py-5 ">
           {[
             { title: "Live BBQ Counters", img: "https://i.pinimg.com/736x/65/98/10/659810f2b9e8de538e5a654c7160ec83.jpg", icon: <Flame /> },
             { title: "Royal Buffet Setup", img: "https://i.pinimg.com/736x/99/91/c2/9991c20d1b47768922bcf8bd0e3c3acf.jpg", icon: <Gift /> },
             { title: "Dessert Paradise", img: "https://i.pinimg.com/1200x/9b/c7/fc/9bc7fc0e6f4b529ce7475f92831b6491.jpg", icon: <Coffee /> },
           ].map((h, i) => (
-            <div key={i} className="relative rounded-2xl overflow-hidden shadow-md border border-gray-200 group">
-              <img src={h.img} alt={h.title} className="w-full h-72 object-cover group-hover:scale-105 transition duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent flex items-end p-6">
-                <div>
-                  <div className="text-amber-500 flex items-center gap-2 font-semibold">
-                    {h.icon}
-                    <span>{h.title}</span>
-                  </div>
-                  <p className="text-gray-600 text-sm mt-2">Premium ingredients • Luxury Presentation</p>
+            <div key={i} className="relative rounded-2xl overflow-hidden shadow-md border border-gray-200 group ">
+              <img src={h.img} alt={h.title} className="w-full h-72 object-cover group-hover:scale-105 transition duration-500 " />
+
+              <div className="p-6 text-center">
+                <div className="text-amber-600 flex items-center justify-center gap-3 font-bold text-xl">
+                  {h.icon}
+                  <span>{h.title}</span>
                 </div>
               </div>
+
+
             </div>
           ))}
         </div>
@@ -285,9 +285,8 @@ export default function Home() {
                 <button
                   key={i}
                   onClick={() => setTestimonialIndex(i)}
-                  className={`w-4 h-4 rounded-full transition ${
-                    i === testimonialIndex ? "bg-amber-400 shadow-md" : "bg-gray-300"
-                  }`}
+                  className={`w-4 h-4 rounded-full transition ${i === testimonialIndex ? "bg-amber-400 shadow-md" : "bg-gray-300"
+                    }`}
                 ></button>
               ))}
             </div>

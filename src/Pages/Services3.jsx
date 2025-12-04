@@ -136,12 +136,7 @@ export default function Services() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-5 flex flex-wrap items-center gap-3 text-xs sm:text-sm"
           >
-            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-600 px-3 py-1 text-white font-medium">
-              ● Veg Catering
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-amber-600 px-3 py-1 text-white font-medium">
-              ● Non-Veg Catering
-            </span>
+            
           </motion.div>
 
           <motion.div

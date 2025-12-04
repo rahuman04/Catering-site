@@ -38,8 +38,17 @@ export default function Header() {
       ],
     },
 
+     {
+      name: "Contact",
+      dropdown: [
+        { name: "Contact", link: "/Contact" },
+        { name: "Contact2", link: "/Contact2" },
+       
+      ],
+    },
+
     { name: "About", link: "/about" },
-    { name: "Contact", link: "/contact" },
+   
   ];
 
   return (
@@ -109,12 +118,7 @@ export default function Header() {
             Book Now
           </a>
 
-          <button
-            onClick={() => setDark(!dark)}
-            className="ml-4 text-xl text-gray-800 dark:text-gray-200"
-          >
-            {dark ? "🌙" : "☀️"}
-          </button>
+         
         </nav>
 
         <button
