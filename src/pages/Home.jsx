@@ -71,7 +71,8 @@ export default function HomeHeader() {
                 {item.title}
               </h3>
               <p className="text-gray-600">
-                High-quality service and unforgettable dishes made by professionals.
+                High-quality service and unforgettable dishes made by
+                professionals.
               </p>
             </div>
           ))}
@@ -274,6 +275,7 @@ export default function HomeHeader() {
         </h2>
 
         <div className="relative max-w-6xl mx-auto">
+          {/* LEFT BUTTON */}
           <button
             onClick={() =>
               document
@@ -285,29 +287,39 @@ export default function HomeHeader() {
             &larr;
           </button>
 
+          {/* DISHES LIST */}
           <div
             id="dishesContainer"
             className="flex space-x-6 overflow-x-auto no-scrollbar px-4 scroll-smooth"
           >
-            {[1, 2, 3, 4].map((n) => (
+            {[
+              { name: "Kesari", img: "https://i.pinimg.com/1200x/d1/d3/d7/d1d3d7fe9de2b785034f31f507ac60c5.jpg" },
+              { name: "Mutton Briyani", img: "https://png.pngtree.com/thumb_back/fh260/background/20240328/pngtree-mutton-biryani-meal-in-a-plate-on-table-image_15645442.jpg" },
+              { name: "Bread Halwa", img: "https://i.pinimg.com/736x/3a/81/b4/3a81b47416114c3ea3ef93d08ed4f584.jpg" },
+              { name: "Chicken Biryani", img: "https://i.pinimg.com/736x/f6/8c/d6/f68cd6438a5472e2dc6a82684df54abd.jpg" },
+              { name: "Fried Chicken", img: "https://i.pinimg.com/736x/5c/a0/3a/5ca03a1d98fc96cab4be558904bc8357.jpg" },
+              { name: "Parotta", img: "https://i.pinimg.com/736x/da/8f/69/da8f6942f6b71723a28ae58360941d6d.jpg" },
+              { name: "Chicken Koththu", img: "https://i.pinimg.com/1200x/ff/d0/c3/ffd0c31277115e1a93b678516092fce6.jpg" },
+              { name: "Masala Dosa", img: "https://i.pinimg.com/736x/c7/1e/ea/c71eea435b61a0362d6fde7e8df975a9.jpg" },
+
+            ].map((dish, index) => (
               <div
-                key={n}
+                key={index}
                 className="min-w-[250px] rounded-xl overflow-hidden shadow-md bg-white border border-[#E6D8C4]"
               >
                 <img
-                  src={`../images/dishes${n}.png`}
-                  alt=""
+                  src={dish.img}
+                  alt={dish.name}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-4">
-                  <h3 className="font-semibold text-[#4A2E21]">
-                    Signature Dish {n}
-                  </h3>
+                  <h3 className="font-semibold text-[#4A2E21]">{dish.name}</h3>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* RIGHT BUTTON */}
           <button
             onClick={() =>
               document
@@ -351,7 +363,9 @@ export default function HomeHeader() {
 
       {/* CTA */}
       <section className="py-20 text-center text-white bg-gradient-to-r from-[#B77E47] via-[#8D5A34] to-[#5B3A27] px-6">
-        <h2 className="text-4xl font-bold mb-4">Ready to Make Your Event Special?</h2>
+        <h2 className="text-4xl font-bold mb-4">
+          Ready to Make Your Event Special?
+        </h2>
         <p className="mb-6 text-[#FDEED4]">
           Let’s create a memorable dining experience together.
         </p>
@@ -363,55 +377,6 @@ export default function HomeHeader() {
           Get a Quote
         </Link>
       </section>
-      
-
-      {/* FOOTER */}
-<footer className="bg-[#F6F1E9] text-[#4A3F35] py-12 px-6 shadow-inner">
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-
-    {/* Brand */}
-    <div>
-      <h3 className="font-bold text-xl mb-3 text-[#3A3028]">Jack Cater</h3>
-      <p className="text-[#6E6258]">
-        Your trusted partner for premium catering services.
-      </p>
-    </div>
-
-    {/* Links */}
-    <div>
-      <h3 className="font-bold text-xl mb-3 text-[#3A3028]">Quick Links</h3>
-      <ul className="space-y-2">
-        <li>
-          <Link className="hover:text-[#A67F5B] transition" to="/">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link className="hover:text-[#A67F5B] transition" to="/menu">
-            Menu
-          </Link>
-        </li>
-        <li>
-          <Link className="hover:text-[#A67F5B] transition" to="/quote">
-            Get Quote
-          </Link>
-        </li>
-      </ul>
-    </div>
-
-    {/* Social */}
-    <div>
-      <h3 className="font-bold text-xl mb-3 text-[#3A3028]">Follow Us</h3>
-      <p className="text-[#6E6258]">Instagram • Facebook • Twitter</p>
-    </div>
-
-  </div>
-
-  <p className="text-center mt-10 text-sm text-[#8F8176]">
-    © {new Date().getFullYear()} CaterEase. All rights reserved.
-  </p>
-</footer>
-
     </>
   );
 }

@@ -5,7 +5,6 @@ export default function HeroSection() {
   return (
     <section className="relative bg-[#F3E8DF] py-20 md:py-32">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center">
-
         {/* Left Text */}
         <div className="md:w-1/2 space-y-5">
           <h1 className="text-5xl md:text-6xl font-serif text-[#5C4033] font-bold leading-tight">
