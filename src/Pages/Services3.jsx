@@ -133,7 +133,7 @@ export default function Services() {
                     >
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white ">
                             Catering services for{" "}
-                            <span className="text-emerald-300">every occasion</span>
+                            <span className="text-emerald-300 ">every occasion</span>
                         </h1>
 
                     </motion.div>
@@ -145,11 +145,11 @@ export default function Services() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="mt-5 flex flex-wrap items-center gap-3 text-xs sm:text-sm"
                     >
-                        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-600 px-3 py-1 text-white font-medium">
-                            ● Veg Catering
+                        <span className="inline-flex items-center gap-1 rounded-full bg-emerald-600 px-3 py-1 text-white font-medium px-3 py-2">
+                            ● Veg 
                         </span>
-                        <span className="inline-flex items-center gap-1 rounded-full bg-amber-600 px-3 py-1 text-white font-medium">
-                            ● Non-Veg Catering
+                        <span className="inline-flex items-center gap-1 rounded-full bg-amber-600 px-3 py-1 text-white font-medium px-3 py-2">
+                            ● Non-Veg 
                         </span>
 
                     </motion.div>

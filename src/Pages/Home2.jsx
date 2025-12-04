@@ -10,7 +10,7 @@ export default function HomePageSections() {
     <main className="space-y-24">
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative h-[90vh] w-full overflow-hidden">
+      <section className="relative h-[70vh] w-full overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 mt-20">
           <img
@@ -29,23 +29,23 @@ export default function HomePageSections() {
             transition={{ duration: 0.6 }}
             className="text-green-300 text-sm uppercase tracking-wider mb-2"
           >
-            Premium Veg & Non-Veg Catering
+        
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white text-4xl md:text-6xl font-bold leading-tight"
+            className="text-white text-4xl md:text-6xl font-bold leading-tight pt-20"
           >
-            Jack Cater – Making Every Event<br />Unforgettable
+             Making Every Event<br />Unforgettable
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-gray-200 mt-4 max-w-xl"
+            className="text-gray-200 mt-4 max-w-xl "
           >
             From weddings to corporate gatherings, we serve delicious,
             hygienic & beautifully presented dishes tailored for your event.
@@ -56,9 +56,9 @@ export default function HomePageSections() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="mt-6 flex gap-4"
+            className="mt-6 flex gap-4 "
           >
-            <button className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition">
+            <button className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition ">
               View Menu
             </button>
 
@@ -132,10 +132,10 @@ export default function HomePageSections() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[ 
-              { title: "Weddings", img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80" },
+              { title: "Weddings", img: "https://i.pinimg.com/1200x/47/6d/db/476ddbbaf91065f93ad0f6888e50e9dc.jpg" },
               { title: "Corporate Events", img: "https://i.pinimg.com/736x/c9/d2/57/c9d257d0191ae9443a20fb228125f3bb.jpg"},
               { title: "Live Counters", img: "https://i.pinimg.com/1200x/73/f8/a9/73f8a962194665f8ff4a72d0267f0fff.jpg" },
-              { title: "Private Parties", img: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80" },
+              { title: "Private Parties", img: "https://i.pinimg.com/1200x/7c/e4/bc/7ce4bc8e2ac775552fb66cec24547dd5.jpg" },
             ].map((s, i) => (
               <motion.div
                 key={i}
@@ -233,13 +233,13 @@ export default function HomePageSections() {
 
 
       {/* ================= WHY CHOOSE US SECTION (NOW BELOW PEOPLE CHOOSE US) ================= */}
-    <section
-  className="relative py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
+  <section
+  className="relative py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
   aria-labelledby="why-choose-heading"
 >
-  {/* Decorative subtle pattern (keeps markup self-contained) */}
+  {/* Decorative subtle pattern */}
   <svg
-    className="pointer-events-none absolute right-0 top-0 opacity-5 w-72 h-72 transform translate-x-1/4 -translate-y-1/4"
+    className="pointer-events-none absolute right-0 top-0 opacity-5 w-64 h-64 translate-x-1/4 -translate-y-1/4"
     aria-hidden
     viewBox="0 0 100 100"
   >
@@ -256,10 +256,7 @@ export default function HomePageSections() {
     {/* Header */}
     <div className="mb-12 text-center">
       <p className="inline-flex items-center text-sm uppercase text-green-600 font-semibold gap-2">
-        <span
-          className="inline-block w-7 h-7 rounded-full bg-gradient-to-br from-green-600 to-emerald-400 text-white flex items-center justify-center shadow"
-          aria-hidden
-        >
+        <span className="inline-block w-8 h-8 rounded-full bg-gradient-to-br from-green-600 to-emerald-400 text-white flex items-center justify-center shadow">
           ✓
         </span>
         Why Choose Us
@@ -267,144 +264,117 @@ export default function HomePageSections() {
 
       <h2
         id="why-choose-heading"
-        className="mt-4 text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight"
+        className="mt-3 text-3xl sm:text-4xl font-bold text-gray-900"
       >
-        Trusted Caterers — Quality, Punctuality & Care
+        Reliable Catering for Every Occasion
       </h2>
 
-      <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
-        From hygiene-first kitchens to curated tasting sessions — we deliver consistent flavour,
-        flawless service and peace of mind for every event.
+      <p className="mt-3 text-gray-600 max-w-xl mx-auto">
+        Professional team, hygienic food preparation, and timely service — all tailored for your event.
       </p>
     </div>
 
     {/* Features grid */}
-    <div
-      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-      role="list"
-      aria-label="Service highlights"
-    >
-      {[
-        {
-          key: "hygiene",
-          title: "Hygiene-first kitchens",
-          desc: "Regular audits, temperature logs & strict SOPs for safe food handling.",
-          aria: "Hygiene-first kitchens: Regular audits and temperature checks."
-        },
-        {
-          key: "menu",
-          title: "Custom menu & tasting",
-          desc: "Tailored, seasonal menus with pre-event tasting sessions.",
-          aria: "Custom menus and tasting sessions available."
-        },
-        {
-          key: "ontime",
-          title: "On-time delivery",
-          desc: "Dedicated logistics & coordinated setup so service starts on schedule.",
-          aria: "On-time delivery and setup services."
-        },
-        {
-          key: "chefs",
-          title: "Experienced chefs",
-          desc: "Skilled chefs focused on flavour, presentation and consistency.",
-          aria: "Experienced chefs delivering consistent quality."
-        }
-      ].map((f, i) => (
-        <article
-          key={f.key}
-          role="listitem"
-          className="relative group p-6 bg-white rounded-2xl shadow-sm hover:shadow-md focus-within:shadow-md transition-transform duration-300 transform hover:-translate-y-1 focus:-translate-y-1 outline-none"
-          tabIndex={0}
-          aria-labelledby={`feature-${f.key}`}
-          title={f.aria}
-        >
-          {/* Number badge */}
-          <div className="absolute -top-4 left-6">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white border border-green-100 shadow text-green-700 font-semibold">
-              {String(i + 1).padStart(2, "0")}
-            </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      {/* Feature 1 */}
+      <article className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center text-green-600">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+              <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
           </div>
 
-          {/* Icon + Title */}
-          <div className="flex items-start gap-4">
-            <div
-              className="flex-none w-12 h-12 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 flex items-center justify-center text-green-600"
-              aria-hidden
-            >
-              {/* simple SVG checkmark / clock / menu / chef depending on index */}
-              {i === 0 && (
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              )}
-              {i === 1 && (
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              )}
-              {i === 2 && (
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5"/>
-                  <path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              )}
-              {i === 3 && (
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" aria-hidden>
-                  <path d="M8 14s1-4 4-4 4 4 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M3 21h18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              )}
-            </div>
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800"> Hygienic Foods</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Clean kitchens, daily checks, and food safety standards.
+            </p>
+          </div>
+        </div>
+      </article>
 
-            <div className="min-w-0">
-              <h3 id={`feature-${f.key}`} className="text-lg font-semibold text-gray-800">
-                {f.title}
-              </h3>
-              <p className="mt-2 text-sm text-gray-600 leading-relaxed">{f.desc}</p>
-
-              {/* inline micro-CTA */}
-              <div className="mt-4">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-green-700 hover:text-green-800 focus:text-green-800"
-                  aria-label={`Learn more about ${f.title}`}
-                >
-                  Learn more
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" aria-hidden>
-                    <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
-              </div>
-            </div>
+      {/* Feature 2 */}
+      <article className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center text-green-600">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+            </svg>
           </div>
 
-          {/* subtle hover detail */}
-          <div
-            className="pointer-events-none absolute inset-0 rounded-2xl border border-transparent group-hover:border-green-50 transition-colors"
-            aria-hidden
-          />
-        </article>
-      ))}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800">Custom Menu</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Choose from a wide variety of dishes based on your event.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      {/* Feature 3 */}
+      <article className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center text-green-600">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800">On-Time Delivery</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Punctual setup and smooth service for every event.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      {/* Feature 4 */}
+      <article className="group p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition-transform hover:-translate-y-1">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-lg bg-emerald-50 flex items-center justify-center text-green-600">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+              <path d="M8 14s1-4 4-4 4 4 4 4" stroke="currentColor" strokeWidth="1.5" />
+              <path d="M3 21h18" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-gray-800">Skilled Chefs</h3>
+            <p className="mt-2 text-sm text-gray-600">
+              Expert preparation, great taste, and beautiful presentation.
+            </p>
+          </div>
+        </div>
+      </article>
     </div>
 
     {/* Footer CTA */}
-    <div className="mt-12 text-center">
+    <div className="mt-14 text-center">
       <a
         href="#book"
-        className="inline-flex items-center gap-3 px-7 py-3 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 text-white font-semibold shadow-lg hover:brightness-105 focus:outline-none focus:ring-4 focus:ring-emerald-200 transition"
-        aria-label="Book a tasting session"
+        className="inline-flex items-center gap-3 px-7 py-3 rounded-full bg-gradient-to-r from-green-600 to-emerald-500 text-white font-semibold shadow-lg hover:brightness-105"
       >
         Book a tasting
-        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" aria-hidden>
-          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="1.5" />
         </svg>
       </a>
+
       <p className="mt-3 text-sm text-gray-500">
-        Prefer a custom quote? <a href="#contact" className="text-green-700 font-medium hover:underline">Contact us</a>
+        Prefer a custom quote?{" "}
+        <a href="#contact" className="text-green-700 font-medium hover:underline">
+          Contact us
+        </a>
       </p>
     </div>
   </div>
 </section>
+
+
 
 
 

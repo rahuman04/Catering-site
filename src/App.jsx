@@ -7,9 +7,9 @@ import Services from "./Pages/Services";
 import Services2 from "./Pages/Services2";
 import Home2 from "./Pages/Home2";
 import Home3 from "./pages/Home3"
-import Menu from "./pages/Menu";
+import Menu from "./Pages/Menu";
 import Services3 from "./Pages/Services3";
-// import Contact from "./pages/Contact";
+import Contact from "./Pages/Contact";
 function App() {
   return (
     <Router>
@@ -34,7 +34,7 @@ function App() {
          <Route path="/menu" element={<Menu />} />
          <Route path="/Services3" element={<Services3 />} />
         
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

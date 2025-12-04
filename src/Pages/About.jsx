@@ -129,7 +129,7 @@ export default function About() {
     );
   }
 
-  /* ---------- Gallery & Testimonials & FAQ (unchanged) ---------- */
+  /* ---------- Gallery & Testimonials & FAQ (unchanged except FAQ width tweak and small comments) ---------- */
   const ImageGallery = () => {
     const [open, setOpen] = React.useState(false);
     const [index, setIndex] = React.useState(0);
@@ -141,7 +141,7 @@ export default function About() {
 
     return (
       <div className="mt-10">
-        <motion.h3 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="text-2xl font-semibold text-[var(--brown)] mb-4">Gallery</motion.h3>
+        <motion.h3 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="text-2xl font-semibold text-[var(--brown)] mb-4 text-center">Gallery</motion.h3>
 
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {galleryImages.map((img, i) => (
@@ -179,7 +179,7 @@ export default function About() {
 
     return (
       <div className="mt-10">
-        <motion.h3 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="text-2xl font-semibold text-[var(--brown)] mb-4">What clients say</motion.h3>
+        <motion.h3 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="text-2xl font-semibold text-[var(--brown)] mb-4 text-center">What clients say</motion.h3>
         <div className="relative bg-white p-8 rounded-2xl shadow-md overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div key={i} initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.55 }} className="text-center">
@@ -198,19 +198,35 @@ export default function About() {
     );
   };
 
+  // FAQ: made the text width narrower for easier reading and added small comments
   const FAQ = () => {
     const [openIdx, setOpenIdx] = React.useState(null);
+
     return (
       <div className="mt-10">
-        <motion.h3 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="text-2xl font-semibold text-[var(--brown)] mb-4">Frequently asked questions</motion.h3>
-        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} className="space-y-3">
+        <motion.h3 variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="text-2xl font-semibold text-[var(--brown)] mb-4 text-center">Frequently asked questions</motion.h3>
+
+        {/* Limit the FAQ column width for better readability (narrower text) */}
+        <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} className="space-y-3 max-w-2xl mx-auto">
           {faqs.map((f, idx) => (
             <motion.div key={idx} variants={fadeInUp} className="bg-white rounded-lg shadow p-4">
-              <button className="w-full text-left flex justify-between items-center focus:outline-none" onClick={() => setOpenIdx(openIdx === idx ? null : idx)}>
+              {/* question button */}
+              <button
+                className="w-full text-left flex justify-between items-center focus:outline-none"
+                onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                aria-expanded={openIdx === idx}
+                aria-controls={`faq-${idx}`}
+              >
                 <span className="font-medium text-[var(--brown)]">{f.q}</span>
                 <span className="text-gray-400">{openIdx === idx ? '−' : '+'}</span>
               </button>
-              {openIdx === idx && <div className="mt-3 text-gray-600">{f.a}</div>}
+
+              {/* answer area — additionally limit answer width (max-w-prose) for comfortable line length */}
+              {openIdx === idx && (
+                <div id={`faq-${idx}`} className="mt-3 text-gray-600 max-w-prose">
+                  {f.a}
+                </div>
+              )}
             </motion.div>
           ))}
         </motion.div>

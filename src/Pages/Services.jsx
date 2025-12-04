@@ -19,7 +19,7 @@ const CARDS = [
     id: 3,
     title: "Birthday Parties",
     desc: "Custom menus for birthdays, baby showers & family gatherings.",
-    img: "./src/images/Birthday party.jpg",
+    img: "https://i.pinimg.com/1200x/97/44/fe/9744fe3a53da07076fe100b1358f13e2.jpg",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ const CARDS = [
     id: 6,
     title: "Custom Menus",
     desc: "Special menus for diet needs, regional cuisines & themes.",
-    img: "https://i.pinimg.com/1200x/17/d2/f5/17d2f5900c46f8b3c1a4f564b0f0077a.jpg",
+    img: "https://i.pinimg.com/736x/d3/ce/ba/d3cebae8a0314f5d713f407b5bfc84c3.jpg",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function Services() {
     <div className="w-full">
 
       {/* =============== HERO SECTION =============== */}
-      <section className="relative w-full h-[350px] md:h-[450px] lg:h-[550px] mt-20">
+      <section className="relative w-full h-[50px] md:h-[50px] lg:h-[400px] mt-20">
         <img
           src="./src/images/service1.png"
           alt="Catering Hero"
@@ -66,12 +66,12 @@ export default function Services() {
               Delicious food, beautiful presentation & professional service.
             </p>
 
-            <div className="mt-6 flex gap-3">
-              <Link to="/book" className="px-5 py-3 bg-amber-600 rounded-md hover:bg-amber-700">
+            <div className="mt-6 flex gap-3 ">
+              <Link to="/book" className="inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold bg-amber-500 text-white shadow-sm hover:bg-amber-600 transition">
                 Book Now
               </Link>
-              <a href="mailto:info@example.com" className="px-5 py-3 border rounded-md hover:bg-white/10">
-                Request Quote
+              <a href="mailto:info@example.com" className="inline-flex items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold border border-white/70 text-white bg-transparent hover:bg-white/10 transition">
+                View Services
               </a>
             </div>
           </div>
