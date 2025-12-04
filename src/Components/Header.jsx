@@ -23,28 +23,31 @@ export default function Header() {
       dropdown: [
         { name: "Home 1", link: "/" },
         { name: "Home 2", link: "/home2" },
-        { name: "Home 3", link: "/home3" }
-      ]
+        { name: "Home 3", link: "/home3" },
+      ],
     },
 
     { name: "Menu", link: "/menu" },
 
-    { name: "Services", 
+    {
+      name: "Services",
       dropdown: [
-         {name: "Services", link: "/services" },
-         {name: "Services 2", link: "/services2" },
-         {name: "Services 3", link: "/services3"}
-      ]
+        { name: "Services", link: "/services" },
+        { name: "Services 2", link: "/services2" },
+        { name: "Services 3", link: "/services3" },
+      ],
     },
 
     { name: "About", link: "/about" },
-    { name: "Contact", link: "/contact" }
+    { name: "Contact", link: "/contact" },
   ];
 
   return (
     <header
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 backdrop-blur-lg ${
-        scrolled ? "bg-white/90 dark:bg-black/80 shadow-md py-3" : "bg-transparent py-5"
+        scrolled
+          ? "bg-white/90 dark:bg-black/80 shadow-md py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6">
@@ -73,7 +76,9 @@ export default function Header() {
               {item.dropdown && (
                 <button
                   className="flex items-center gap-1 text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-orange-600"
-                  onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === idx ? null : idx)
+                  }
                 >
                   {item.name}
                   <ChevronDown size={18} />
@@ -126,7 +131,9 @@ export default function Header() {
               <div key={idx}>
                 <button
                   className="w-full text-left flex justify-between items-center text-gray-900 dark:text-gray-200"
-                  onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === idx ? null : idx)
+                  }
                 >
                   {item.name}
                   {item.dropdown && <ChevronDown size={18} />}
